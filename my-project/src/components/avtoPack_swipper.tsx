@@ -2,7 +2,6 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css'; // Import basic Swiper styles
 import truck_icaon from '../../public/svg/truck_2d.svg';
-import Star_icaon from '../../public/svg/Star.svg';
 
 // Optionally import Swiper modules
 import 'swiper/css/navigation'; // Navigation module

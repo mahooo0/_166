@@ -55,7 +55,7 @@ export default function Header() {
                             onClick={() => setuser(true)}
                             className={
                                 user
-                                    ? ' w-full font-mulish font-[500] bg-white text-[14px] h-[38px] text-[#ECAC00] border-[#ECAC00] border-[1px] rounded-lg flex justify-center items-center'
+                                    ? ' w-f font-mulish font-[500] bg-white text-[14px] h-[38px] text-[#ECAC00] border-[#ECAC00] border-[1px] rounded-lg flex justify-center items-center'
                                     : 'p-[10px] text-[14px] text-black font-[500]'
                             }
                         >
@@ -66,38 +66,38 @@ export default function Header() {
                         className="flex flex-row items-center gap-[24px] "
                         style={wi ? { display: 'none' } : {}}
                     >
-                        <a href="/">
+                        <div onClick={() => router.push('/')}>
                             <Image
                                 src={Facebook_icon}
                                 alt="Facebook_icon"
                                 width={20}
                                 height={20}
                             />
-                        </a>
-                        <a href="/services">
-                            <Image
-                                src={instaqram_icon}
-                                alt="instaqram_icon"
-                                width={20}
-                                height={20}
-                            />
-                        </a>
-                        <a href="/abautus">
-                            <Image
-                                src={youtube_icon}
-                                alt="youtube_icon"
-                                width={20}
-                                height={20}
-                            />
-                        </a>
-                        <a href="/team">
-                            <Image
-                                src={Linkedin_icon}
-                                alt="Linkedin_icon"
-                                width={20}
-                                height={20}
-                            />
-                        </a>
+                        </div>
+
+                        <Image
+                            onClick={() => router.push('/services')}
+                            src={instaqram_icon}
+                            alt="instaqram_icon"
+                            width={20}
+                            height={20}
+                        />
+
+                        <Image
+                            onClick={() => router.push('/abautus')}
+                            src={youtube_icon}
+                            alt="youtube_icon"
+                            width={20}
+                            height={20}
+                        />
+
+                        <Image
+                            onClick={() => router.push('/team')}
+                            src={Linkedin_icon}
+                            alt="Linkedin_icon"
+                            width={20}
+                            height={20}
+                        />
                     </div>
                 </div>
                 <div

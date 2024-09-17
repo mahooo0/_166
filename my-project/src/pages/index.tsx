@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import localFont from 'next/font/local';
+
 import Header from '@/components/Header';
 
 import Track_icaon from '../../public/svg/track.svg';
