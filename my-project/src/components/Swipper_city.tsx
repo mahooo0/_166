@@ -7,17 +7,22 @@ import Uzbekistan_icaon from '../../public/svg/uzbekistan.svg';
 import 'swiper/css/navigation'; // Navigation module
 import { Navigation } from 'swiper/modules'; // Import Navigation module from Swiper
 import Image from 'next/image';
+import { useEffect, useState } from 'react';
 
 export default function MySwiper() {
+    const [wi, setwi] = useState<boolean>();
+    useEffect(() => {
+        setwi(window.screen.width < 690);
+    }, []);
     return (
         <Swiper
-            className="ml-[108px] mt-[31px]"
+            className={wi ? 'mt-[26px]' : 'ml-[108px] mt-[31px]'}
             navigation={false} // Enable navigation buttons (prev/next)
             modules={[Navigation]} // Add the Navigation module
-            spaceBetween={28} // Spacing between slides
-            slidesPerView={8} // Number of slides to show
+            spaceBetween={wi ? 12 : 28} // Spacing between slides
+            slidesPerView={wi ? 2.4 : 8} // Number of slides to show
         >
-            <SwiperSlide className="ml-[108px]">
+            <SwiperSlide className={wi ? 'ml-[35px]' : 'ml-[108px]'}>
                 <div className="flex flex-row w-fit py-[11px] px-[16px] gap-[11px] bg-[#F4F4F4] rounded-lg min-w-[151px]">
                     <Image src={Uzbekistan_icaon} alt="Uzbekistan_icaon" />
                     Uzbekstan

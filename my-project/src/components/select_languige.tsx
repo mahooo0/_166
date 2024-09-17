@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Image from 'next/image';
 
 import English_icon from '../../public/svg/English.svg';
@@ -8,6 +8,10 @@ import Madrid_icon from '../../public/svg/mandrind.svg';
 export default function LanguageSelect() {
     const [selectedLanguage, setSelectedLanguage] = useState('English');
     const [show, setshow] = useState(false);
+    const [wi, setwi] = useState<boolean>();
+    useEffect(() => {
+        setwi(window.screen.width < 690);
+    }, []);
     const options = [
         { label: 'English', icon: English_icon },
         { label: 'Russian', icon: Russia_icon },
@@ -23,6 +27,7 @@ export default function LanguageSelect() {
                 onClick={() => setshow((prew) => !prew)}
             >
                 <Image
+                    style={wi ? { display: 'none' } : {}}
                     src={
                         options?.find(
                             (option) => option.label === selectedLanguage
