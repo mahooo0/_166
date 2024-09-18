@@ -10,7 +10,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Image from 'next/image';
 import Rewue_swipper from '@/components/Revwue_swipper';
-function ebautus() {
+function Ebautus() {
     const [scrollPosition, setScrollPosition] = useState(0);
 
     useEffect(() => {
@@ -27,7 +27,7 @@ function ebautus() {
             window.removeEventListener('scroll', handleScroll);
         };
     }, []);
-    console.log(scrollPosition);
+
     return (
         <div>
             <Header />
@@ -548,4 +548,4 @@ function ebautus() {
     );
 }
 
-export default ebautus;
+export default Ebautus;

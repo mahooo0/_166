@@ -7,7 +7,7 @@ import phone_icon from '../../public/svg/phone_black.svg';
 import bunner from '../../public/svg/REklam_bunner.svg';
 import Image from 'next/image';
 import Services_aside from '@/components/Services_aside';
-export default function services() {
+export default function Services() {
     const [wi, setwi] = useState<boolean>();
     useEffect(() => {
         setwi(window.screen.width < 690);

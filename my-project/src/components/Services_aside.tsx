@@ -73,7 +73,7 @@ const AccordionItem: React.FC<AccordionItemProps> = ({
 };
 
 const Services_aside: React.FC = () => {
-    let [show, setshow] = useState<any>(1);
+    const [show, setshow] = useState(1);
     console.log(show);
 
     return (
