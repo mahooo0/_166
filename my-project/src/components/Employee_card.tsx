@@ -5,7 +5,7 @@ import employe from '../../public/svg/employe.svg';
 import Image from 'next/image';
 
 function Employee_card() {
-    let [ison, setison] = useState<boolean>(false);
+    const [ison, setison] = useState<boolean>(false);
     return (
         <div>
             <div
